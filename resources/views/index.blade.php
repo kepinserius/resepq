@@ -145,7 +145,7 @@
          </div>
      </div>
      <div class="container">
-         <div class="play_icon"><a href="#"><img src="play-icon.png"></a></div>
+         <div class="play_icon"><a href="/login"><img src="play-icon.png"></a></div>
      </div>
      
       <!-- banner section end -->

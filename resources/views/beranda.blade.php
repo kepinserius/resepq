@@ -216,21 +216,21 @@
                <div class="container">
                   <h1 class="shop_taital">Top 3 Makanan Bulan Ini</h1>
                   <p class="shop_text">Makanan paling laris dilihat oleh para user dalam bulan ini</p>
-                  <div><img src="rawon.png" class="image_3"></div>
+                  <div><img src="pancake.png" class="image_3"></div>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <div class="container">
+                  <h1 class="shop_taital">Top 3 Makanan Bulan Ini</h1>
+                  <p class="shop_text">Makanan paling laris dilihat oleh para user dalam bulan ini/p>
+                  <div><img src="burger.png" class="image_3"></div>
                </div>
             </div>
             <div class="carousel-item">
                <div class="container">
                   <h1 class="shop_taital">Top 3 Makanan Bulan Ini</h1>
                   <p class="shop_text">Makanan paling laris dilihat oleh para user dalam bulan ini</p>
-                  <div><img src="rendang.png" class="image_3"></div>
-               </div>
-            </div>
-            <div class="carousel-item">
-               <div class="container">
-                  <h1 class="shop_taital">Top 3 Makanan Bulan Ini</h1>
-                  <p class="shop_text">Makanan paling laris dilihat oleh para user dalam bulan ini.</p>
-                  <div><img src="soto.png" class="image_3"></div>
+                  <div><img src="nasitelur.png" class="image_3"></div>
                </div>
             </div>
          </div>

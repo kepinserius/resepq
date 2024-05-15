@@ -326,25 +326,22 @@
          <div class="carousel-inner">
             <div class="carousel-item active">
                <div class="container">
-                  <h1 class="shop_taital">Our Tea Shop</h1>
-                  <p class="shop_text">It is a long established fact that a reader will beIt is a long established fact
-                     that a reader will be</p>
+                  <h1 class="shop_taital">Top 3 Makanan Bulan Ini</h1>
+                  <p class="shop_text">Makanan paling laris dilihat oleh para user dalam bulan ini</p>
                   <div><img src="foto_awal.png" class="image_3"></div>
                </div>
             </div>
             <div class="carousel-item">
                <div class="container">
-                  <h1 class="shop_taital">Our Tea Shop</h1>
-                  <p class="shop_text">It is a long established fact that a reader will beIt is a long established fact
-                     that a reader will be</p>
+                  <h1 class="shop_taital">Top 3 Makanan Bulan Ini</h1>
+                  <p class="shop_text">Makanan paling laris dilihat oleh para user dalam bulan ini/p>
                   <div><img src="foto_awal.png" class="image_3"></div>
                </div>
             </div>
             <div class="carousel-item">
                <div class="container">
-                  <h1 class="shop_taital">Our Tea Shop</h1>
-                  <p class="shop_text">It is a long established fact that a reader will beIt is a long established fact
-                     that a reader will be</p>
+                  <h1 class="shop_taital">Top 3 Makanan Bulan Ini</h1>
+                  <p class="shop_text">Makanan paling laris dilihat oleh para user dalam bulan ini</p>
                   <div><img src="foto_awal.png" class="image_3"></div>
                </div>
             </div>

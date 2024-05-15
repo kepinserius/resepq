@@ -105,9 +105,8 @@
                      <div class="col-md-6">
                         <div class="about_main">
                            <h1 class="about_taital">Tentang Kami</h1>
-                           <p class="about_text">Website resep dengan tata cara serta bahan yang harus digunakan paling lengkap
+                           <p class="about_text">Kami menyediakan website untuk para pengguna yang berkebutuhan untuk melihat resep makanan dan juga dapat memesan bahan makanan secara online. 
                            </p>
-                           <div href = "/login" class="readmore_bt"><a href="/login">Read More</a></div>
                         </div>
                      </div>
                      <div class="col-md-6 ">
@@ -122,9 +121,8 @@
                      <div class="col-md-6">
                         <div class="about_main">
                            <h1 class="about_taital">Tujuan Kami</h1>
-                           <p class="about_text">Memudahkan para Ibu Ibu atau para mahasiswa untuk memasak karena tidak harus membeli bahan makanan secara terpisah
+                           <p class="about_text">Tujuan kami membuat website ini adalah memudahkan para user untuk melihat resep makanan dan juga untuk berbelanja bahan makanan dengan praktis tanpa harus keluar rumah.
                            </p>
-                           <div href = "/login" class="readmore_bt"><a href="/login">Read More</a></div>
                         </div>
                      </div>
                      <div class="col-md-6 ">
@@ -139,9 +137,8 @@
                      <div class="col-md-6">
                         <div class="about_main">
                            <h1 class="about_taital">Kelebihan Kami</h1>
-                           <p class="about_text">Efisiensi waktu untuk berbelanja bahan makanan dan juga dapat melihat resep makanan indonesia secara lengkap beserta tata cara memasaknya
+                           <p class="about_text">Tersedia berbagai jenis makanan yang menampilkan resep dan juga tata cara memasak yang benar. Kami juga selalu menjual bahan makanan yang fresh dan pelayanan yang cepat.
                            </p>
-                           <div href = "/login" class="readmore_bt"><a href="/login">Read More</a></div>
                         </div>
                      </div>
                      <div class="col-md-6 ">

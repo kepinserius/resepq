@@ -22,7 +22,7 @@
                     <img id="user-avatar" src="e2b77fa4d0f2ce86ab0620168c676123.jpg" alt="User Avatar" class="rounded-circle">
                 </div>
                 <div class="email">
-                    <p>KKevin Ganteng</p>
+                    <p>Kevin Ganteng</p>
                     <div class="button-container">
                         <input type="file" id="upload-avatar" style="display:none;">
                         <button id="upload-avatar-btn" class="btn-upload">Upload Gambar</button>

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bootstrap CRUD Data Table for Database with Modal Form</title>
+<title>Resep'Q</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,6 +12,18 @@
 <link href="{{ asset('css/login.css') }}" rel="stylesheet" type="text/css">
 
 <style>
+  .textbox {
+    width: 100%; /* Setiap textbox mengisi lebar container */
+    max-width: 800px; /* Lebar maksimum setiap textbox */
+    border-radius: 150px
+}
+
+.btn-block {
+    width: auto; /* Atur lebar sesuai dengan isi tombol */
+    margin-left: 200px; /* Jarak dari sisi kiri */
+    margin-right: 200px; /* Jarak dari sisi kanan */
+    border-radius: 200px
+}
     body {
         background-image: url('tomatoes-sauce-with-ingredients-black-wooden-plank.jpg');
         background-size: cover;
@@ -71,11 +83,11 @@
     <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
       <div class="row gx-lg-5 align-items-center mb-5">
         <div class="col-lg-6 mb-5 mb-lg-0 text-center" style="z-index: 10">
-          <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(40, 33%, 98%)">
+          <h1 class="my-5 display-5 fw-bold ls-tight" style="color: #ffffff" "font-size: 45px" >
             RESEP'Q <br />
-            <span style="color: hsl(36, 6%, 65%)">Kualitas Terbaik, Pesan Sekarang</span>
+            <span style="color: #FC6736">Kualitas Terbaik, Pesan Sekarang</span>
           </h1>
-          <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
+          <p class="mb-4 opacity-70" style="color: hsl(0, 0%, 100%)">
             Resep'Q adalah platform pemesanan bahan makanan online yang menyediakan produk segar dari produsen lokal terpercaya. Pengguna dapat menjelajahi kategori bahan makanan dan memesan dengan mudah. Fitur rekomendasi resep berdasarkan bahan makanan membantu pengguna menciptakan hidangan baru. Layanan pengiriman cepat dan aman ditawarkan untuk kenyamanan pengguna. Dukungan pelanggan responsif memberikan pengalaman berbelanja yang memuaskan. Resep'Q mendukung misi untuk memudahkan akses terhadap bahan makanan berkualitas. Ini menjadi pilihan utama bagi mereka yang mengutamakan kualitas dan kepraktisan dalam berbelanja online.
           </p>
         </div>

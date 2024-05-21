@@ -10,7 +10,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
    <!-- site metas -->
-   <title>Teab</title>
+   <title>Resep'Q</title>
    <meta name="keywords" content="">
    <meta name="description" content="">
    <meta name="author" content="">
@@ -113,7 +113,6 @@
                                 </span>
                             <span class="be-comment-time">
                             </span>
-            
                         <p class="be-comment-text">
                             Pelayanannya gaada yang judes, semuanya ramah meskipun aku banyak request, good job!!
                         </p>

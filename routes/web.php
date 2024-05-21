@@ -15,6 +15,9 @@ use App\Http\Controllers\keranjangController;
 use App\Http\Controllers\checkoutController;
 use App\Http\Controllers\komentarController;
 use App\Http\Controllers\tentangController;
+use App\Http\Controllers\adminprodukController;
+use App\Http\Controllers\admincartController;
+use App\Http\Controllers\adminpesananController;
 
 
 
@@ -43,3 +46,6 @@ Route::get('/keranjang', [keranjangController::class, 'index']);
 Route::get('/checkout', [checkoutController::class, 'index']);
 Route::get('/komentar', [komentarController::class, 'index']);
 Route::get('/tentang', [tentangController::class, 'index']);
+Route::get('/adminproduk', [adminprodukController::class, 'index']);
+Route::get('/admincart', [admincartController::class, 'index']);
+Route::get('/adminpesanan', [adminpesananController::class, 'index']);

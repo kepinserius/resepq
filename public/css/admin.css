@@ -1,19 +1,90 @@
 body {
     color: #566787;
-    background: #f5f5f5;
+    background: #ffffff;
     font-family: 'Varela Round', sans-serif;
     font-size: 13px;
 }
+
+.pt-3{
+    background-color: #91c6f1;
+}
+.navbar-logo {
+    width: 150px; /* Mengatur lebar gambar */
+    height: auto; /* Mengatur tinggi gambar otomatis agar proporsional */
+    margin-top: -60px;
+}
+
+.navbar {
+    position: relative; /* Mengatur posisi relatif */
+    background-color: rgb(175, 212, 223);
+    border: none;
+    width: 1350px;
+    height: 60px;
+}
+
+.navbar-header {
+    float: left; /* Mengatur elemen navbar-header untuk mengambang di kiri */
+}
+
+.navbar-nav {
+    float: right; /* Mengatur navbar-nav untuk mengambang di kanan */
+    margin-right: 20px; /* Memberi jarak kanan untuk navbar-nav */
+}
+
+.home-nav{
+    margin-top: 5px;
+}
+
+.navbar-nav > li.home-nav > a.navbar_home {
+    color: black;
+}
+
+.update-back {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Jarak antara tombol dan teks "Update" */
+}
+
+.back-image{
+    width: 30px;
+    height: 30px;
+    margin-left: -95px;
+}
+
+.back-button {
+    width: 30px;
+    height: auto;
+    margin-right: -100px;
+}
+
+.button-text {
+    color: black;
+}
+
+/* CSS untuk teks "Update" di tengah */
+.update-text {
+    margin-bottom: 20px; /* Jarak antara teks "Update" dan tabel */
+    font-size: 20px;
+    color: black; /* Mengatur warna teks menjadi hitam */
+    margin-top: 20px;
+}
+
+.profile-image{
+    margin-top: -10px;
+    width: 50px;
+    height: 50px;
+}
+
 .table-wrapper {
-    background: #fff;
+    background: rgb(205, 229, 236);
     padding: 20px 25px;
     margin: 30px 0;
-    border-radius: 3px;
+    border-radius: 20px;
     box-shadow: 0 1px 1px rgba(0,0,0,.05);
 }
 .table-title {        
     padding-bottom: 15px;
-    background: #435d7d;
+    background: rgb(175, 212, 223);
     color: #fff;
     padding: 16px 30px;
     margin: -20px -25px 10px;
@@ -27,7 +98,7 @@ body {
     float: right;
 }
 .table-title .btn {
-    color: #fff;
+    color: #000000;
     float: right;
     font-size: 13px;
     border: none;
@@ -47,7 +118,7 @@ body {
     margin-top: 2px;
 }
 table.table tr th, table.table tr td {
-    border-color: #e9e9e9;
+    border-color: rgb(175, 212, 223);
     padding: 12px 15px;
     vertical-align: middle;
 }
@@ -81,13 +152,13 @@ table.table td a {
     outline: none !important;
 }
 table.table td a:hover {
-    color: #2196F3;
+    color: #00ff73;
 }
 table.table td a.edit {
-    color: #FFC107;
+    color: #000000;
 }
 table.table td a.delete {
-    color: #F44336;
+    color: #000000;
 }
 table.table td i {
     font-size: 19px;
@@ -217,3 +288,56 @@ table.table .avatar {
 .modal form label {
     font-weight: normal;
 }
+
+/* site menu */
+    body {
+        overflow-x: hidden; /* Mencegah scrolling horizontal */
+    }
+    
+    .sidebar {
+        height: 100%;
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        padding-top: 20px;
+    }
+
+    .sidebar a {
+        padding: 10px 15px;
+        text-decoration: none;
+        font-size: 18px;
+        color: white;
+        display: block;
+    }
+
+    .sidebar a:hover {
+        background-color: #575757;
+    }
+
+    .content {
+        margin-left: 260px;
+        padding: 20px;
+    }
+
+    .navbar-logo {
+        height: 30px;
+    }
+
+    .profile-image {
+        height: 30px;
+    }
+
+    .update-text {
+        font-size: 24px;
+        margin: 20px 0;
+    }
+    
+    .table-wrapper {
+        overflow-x: auto; /* Mengaktifkan scrolling horizontal jika tabel terlalu lebar */
+    }
+    
+    table {
+        width: 100%;
+    }

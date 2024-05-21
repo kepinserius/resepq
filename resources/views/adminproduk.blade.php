@@ -25,7 +25,7 @@
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-						<h2>User</h2>
+						<h2>Produk</h2>
 					</div>
 					<div class="col-sm-6">
 											
@@ -41,9 +41,10 @@
                             </div>
 						</th>
                         <th>Nama</th>
-                        <th>Alamat</th>
-                        <th>No Hp</th>
-                        <th>Email</th>
+                        <th>Gambar</th>
+                        <th>Bahan</th>
+                        <th>Cara Masak</th>
+                        <th>Harga</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -115,6 +116,6 @@
                 </tbody>
             </table>
 
-            {{-- <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Employee</span></a>	 --}}
+            <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Employee</span></a>	
         </div>
     </div>

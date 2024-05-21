@@ -25,7 +25,7 @@
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-						<h2>User</h2>
+						<h2>Cart</h2>
 					</div>
 					<div class="col-sm-6">
 											
@@ -40,10 +40,9 @@
                                 <span class="checkbox-number"></span>
                             </div>
 						</th>
-                        <th>Nama</th>
-                        <th>Alamat</th>
-                        <th>No Hp</th>
-                        <th>Email</th>
+                        <th>Produk</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -115,6 +114,6 @@
                 </tbody>
             </table>
 
-            {{-- <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Employee</span></a>	 --}}
+            <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Employee</span></a>	
         </div>
     </div>

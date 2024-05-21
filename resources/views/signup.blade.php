@@ -9,9 +9,22 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link href="{{ asset('css/login.css') }}" rel="stylesheet" type="text/css">
+<link href="{{ asset('css/signup.css') }}" rel="stylesheet" type="text/css">
 
 <style>
+  .textbox {
+    width: 100%; /* Setiap textbox mengisi lebar container */
+    max-width: 800px; /* Lebar maksimum setiap textbox */
+    border-radius: 150px
+}
+
+.btn-block {
+    width: auto; /* Atur lebar sesuai dengan isi tombol */
+    margin-left: 400px; 
+    border-radius: 200px;
+}
+
+
     body {
         background-image: url('flat-lay-composition-mexican-food-with-copyspace.jpg');
         background-size: cover;
@@ -36,24 +49,32 @@
 }
 
 /* Gaya CSS untuk textbox */
-.textbox {
+/* .textbox {
       width: 100%; /* Setiap textbox memiliki lebar 100% */
       background-color: rgb(255, 255, 255); /* Memberikan warna biru pada latar belakang textbox */
       color: rgb(243, 170, 81); /* Memberikan warna hitam pada teks dalam textbox */
       border: none; /* Menghapus border agar lebih rapi */
       padding: 10px; /* Menambahkan padding agar textbox terlihat lebih baik */
       margin-top: 20px; /* Menambahkan margin-top agar textbox sedikit lebih ke bawah */
-    }
+    } */
 
-    /* Gaya CSS untuk label */
+    
     .form-label {
-      color: rgb(212, 156, 92); /* Memberikan warna biru pada label */
+      color: rgb(212, 156, 92); 
     }
 
-/* Gaya CSS untuk label */
 .form-label {
-  color: rgb(212, 156, 92); /* Memberikan warna biru pada label */
+  color: rgb(212, 156, 92); 
 }
+
+.signup-title {
+  text-align: center; /* Memposisikan teks ke tengah */
+  color: #ffffff;
+  margin-bottom: 20px; /* Memberikan jarak antara judul dan form */ 
+  font-size: 100px; /* Ukuran font */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Font family */
+}
+
 
 </style>
 </head>
@@ -61,6 +82,9 @@
 <!-- Section: Design Block -->
 <section class="background-radial-gradient overflow-hidden">
     <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+      <div class="signup-title">
+        <h2>Signup</h2>
+    </div>
       <div class="row gx-lg-5 align-items-center mb-5">
         <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
           <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>

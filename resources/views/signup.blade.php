@@ -26,7 +26,7 @@
 
 
     body {
-        background-image: url('flat-lay-composition-mexican-food-with-copyspace.jpg');
+        background-image: url('/flat-lay-composition-mexican-food-with-copyspace.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -51,12 +51,12 @@
 /* Gaya CSS untuk textbox */
 /* .textbox {
       width: 100%; /* Setiap textbox memiliki lebar 100% */
-      background-color: rgb(255, 255, 255); /* Memberikan warna biru pada latar belakang textbox */
-      color: rgb(243, 170, 81); /* Memberikan warna hitam pada teks dalam textbox */
-      border: none; /* Menghapus border agar lebih rapi */
-      padding: 10px; /* Menambahkan padding agar textbox terlihat lebih baik */
-      margin-top: 20px; /* Menambahkan margin-top agar textbox sedikit lebih ke bawah */
-    } */
+      /* background-color: rgb(255, 255, 255); Memberikan warna biru pada latar belakang textbox
+      color: rgb(243, 170, 81); Memberikan warna hitam pada teks dalam textbox
+      border: none; Menghapus border agar lebih rapi
+      padding: 10px; Menambahkan padding agar textbox terlihat lebih baik
+      margin-top: 20px; Menambahkan margin-top agar textbox sedikit lebih ke bawah
+    } */ 
 
     
     .form-label {
@@ -82,6 +82,13 @@
 <!-- Section: Design Block -->
 <section class="background-radial-gradient overflow-hidden">
     <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+      @if (Session::has('gagal'))
+      <div class="pt-3">
+          <div class="alert alert-danger alert-block" style="z-index: 1">
+              {{ Session::get('gagal') }}
+          </div>
+      </div>
+  @endif
       <div class="signup-title">
         <h2>Signup</h2>
     </div>
@@ -92,35 +99,36 @@
   
           <div class="card bg-glass">
             <div class="card-body px-4 py-5 px-md-5">
-              <form>
+              <form action="/auth/sign" method="post">
+                @csrf
                 <!-- Textbox for name -->
                 <div data-mdb-input-init class="form-outline mb-4">
-                  <input type="text" id="name" class="form-control textbox" /> <!-- Menambahkan kelas "textbox" -->
+                  <input type="text" id="name" name="name" class="form-control textbox" /> <!-- Menambahkan kelas "textbox" -->
                   <label class="form-label" for="name">Name</label>
                 </div>
 
                 <!-- Email input -->
                 <div data-mdb-input-init class="form-outline mb-4">
-                  <input type="email" id="email" class="form-control textbox" /> <!-- Menambahkan kelas "textbox" -->
+                  <input type="email" id="email" name="email" class="form-control textbox" /> <!-- Menambahkan kelas "textbox" -->
                   <label class="form-label" for="email">Email</label>
                 </div>
   
                 <!-- Password input -->
                 <div data-mdb-input-init class="form-outline mb-4">
-                  <input type="password" id="password" class="form-control textbox" /> <!-- Menambahkan kelas "textbox" -->
+                  <input type="password" id="password" name="password" class="form-control textbox" /> <!-- Menambahkan kelas "textbox" -->
                   <label class="form-label" for="password">Password</label>
                 </div>
 
                 <!-- Confirm Password input -->
                 <div data-mdb-input-init class="form-outline mb-4">
-                  <input type="password" id="confirmPassword" class="form-control textbox" /> <!-- Menambahkan kelas "textbox" -->
+                  <input type="password" id="confirmPassword" name="confirm" class="form-control textbox" /> <!-- Menambahkan kelas "textbox" -->
                   <label class="form-label" for="confirmPassword">Confirm Password</label>
                 </div>
   
                 <!-- Submit button -->
-                <a href="/login" class="btn btn-primary btn-block mb-4" role="button">
+                <button type="submit" class="btn btn-primary" style="width: 55rem; border-radius: 50px;">
                   Sign up
-              </a>
+              </button>
   
 </body>
 </html>

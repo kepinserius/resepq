@@ -56,14 +56,26 @@
               <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
                <li style="position: relative;"> <!-- Tambahkan style position: relative; untuk membuat posisi absolut relatif terhadap elemen ini -->
                    <!-- Tombol untuk menampilkan opsi -->
-                   <a href="#" class="btn btn-primary nav-link" type="button" id="user-dropdown" style="padding: 5px; background-color: rgb(255, 255, 255); display: inline-block; width: 50px; text-align: center; border-color:rgb(97, 150, 166)">
-                       <img src="profile.png" alt="User Icon" style="max-width: 100%; height: auto;">
-                   </a>
-                   <!-- Opsi "Profile" dan "Logout" -->
-                   <div id="dropdown-options" style="display: none; position: absolute; top: 100%; left: 0; background-color: #f3801f; border: 1px solid #ccc; padding: 5px; border-radius: 6px;">
-                       <a href="/profile" class="dropdown-option">Profile</a>
-                       <a href="/" class="dropdown-option">Logout</a>
-                   </div>
+                   @if(session()->has('email'))
+                   <a href="#" class="btn btn-primary nav-link" type="button" id="user-dropdown" style="padding: 5px; background-color: rgb(255, 255, 255); border: none; margin-right: 5rem; display: inline-block; width: 50px; text-align: center; border-color:rgb(97, 150, 166)">
+                     <img src="profile.png" alt="User Icon" style="max-width: 100%; height: auto;">
+                     {{session('name')}}
+                 </a>
+                 <!-- Opsi "Profile" dan "Logout" -->
+                 <div id="dropdown-options" style="display: none; position: absolute; top: 100%; left: 0; background-color: #f3801f; border: 1px solid #ccc; padding: 5px; border-radius: 6px;">
+                     <a href="/profile" class="dropdown-option">Profile</a>
+                     <a href="/auth/logout" class="dropdown-option">Logout</a>
+                 </div>  
+                 @else
+                 <a href="#" class="btn btn-primary nav-link" type="button" id="user-dropdown" style="padding: 5px; background-color: rgb(255, 255, 255); border: none; margin-right: 5rem; display: inline-block; width: 50px; text-align: center; border-color:rgb(97, 150, 166)">
+                   <img src="profile.png" alt="User Icon" style="max-width: 100%; height: auto;">
+                   Login
+               </a>
+               <!-- Opsi "Profile" dan "Logout" -->
+               <div id="dropdown-options" style="display: none; position: absolute; top: 100%; left: 0; background-color: #f3801f; border: 1px solid #ccc; padding: 5px; border-radius: 6px;">
+                   <a href="/auth/login" class="dropdown-option">Login</a>
+               </div>  
+                   @endif
                </li>
            </ul>
            

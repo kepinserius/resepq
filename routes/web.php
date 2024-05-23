@@ -18,15 +18,48 @@ use App\Http\Controllers\tentangController;
 use App\Http\Controllers\adminprodukController;
 use App\Http\Controllers\admincartController;
 use App\Http\Controllers\adminpesananController;
-
-
-
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/admin', [adminController::class, 'index']);
+Route::prefix('/admin')->group(function () {
+    Route::prefix('/user')->group(function () {
+        Route::get('/', [UserController::class, 'index']);
+    });
+    Route::prefix('/product')->group(function () {
+        Route::get('/', [ProductController::class, 'index']);
+        Route::post('/', [ProductController::class, 'store']);
+        Route::put('/{id}', [ProductController::class, 'update']);
+        Route::get('/{id}', [ProductController::class, 'destroy']);
+    });
+});
+
+Route::prefix('/auth')->group(function () {
+    Route::prefix('/sign')->group(function () {
+        Route::get('/', function () {
+            return view('signup');
+        });
+        Route::post('/', [userController::class, 'store']);
+    });
+    Route::prefix('login')->group(function () {
+        Route::get('/', function () {
+            return view('login');
+        });
+        Route::post('/', [loginController::class, 'login']);
+    });
+    Route::get('/logout', [loginController::class, 'logout']);
+});
+
+Route::prefix('/profile')->group(function () {
+    Route::get('/', [profileController::class, 'showProfilePage']);
+    Route::get('/{id}', [profileController::class, 'show']);
+    Route::put('/{id}', [UserController::class, 'update']);
+});
+
+
 Route::get('/admin/create', [adminController::class, 'create']);
 Route::get('/admin/edit', [adminController::class, 'edit']);
 Route::get('/admin/delete', [adminController::class, 'destroy']);

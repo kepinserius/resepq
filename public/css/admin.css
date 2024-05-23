@@ -295,6 +295,7 @@ table.table .avatar {
     }
     
     .sidebar {
+        z-index: 1;
         height: 100%;
         width: 250px;
         position: fixed;
@@ -336,8 +337,10 @@ table.table .avatar {
     
     .table-wrapper {
         overflow-x: auto; /* Mengaktifkan scrolling horizontal jika tabel terlalu lebar */
+        width: 90rem;
+        margin-left: 25rem;
     }
     
     table {
-        width: 100%;
+        /* width: 100%; */
     }

@@ -19,36 +19,31 @@
         <div class="profile">
             <div class="profile-left">
                 <div class="profile-image">
-                    <img id="user-avatar" src="e2b77fa4d0f2ce86ab0620168c676123.jpg" alt="User Avatar" class="rounded-circle">
+                    <img id="user-avatar" src="{{asset('uploads/users/'.$data['picture'])}}" alt="User Avatar" class="rounded-circle">
                 </div>
                 <div class="email">
-                    <p>Kevin Ganteng</p>
-                    <div class="button-container">
-                        <input type="file" id="upload-avatar" style="display:none;">
-                        <button id="upload-avatar-btn" class="btn-upload">Upload Gambar</button>
-                    </div>
+                    <p>{{$data['name']}}</p>
                 </div>
             </div>
             <div class="profile-right">
                 <div class="form-group" style="margin-top: 10px;"> <!-- Tambahkan margin-top di sini -->
                     <label for="name">Nama:</label>
-                    <input type="text" id="name" name="name" value="John Doe" style="width: 600px;"> <!-- Atur lebar input -->
+                    <input type="text" id="name" name="name" value="{{$data['name']}}" style="width: 600px;" disabled> <!-- Atur lebar input -->
                 </div>
                 <div class="form-group">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" value="user@example.com" style="width: 600px;"> <!-- Atur lebar input -->
+                    <input type="email" id="email" name="email" value="{{$data['email']}}" style="width: 600px;" disabled> <!-- Atur lebar input -->
                 </div>
                 <div class="form-group">
                     <label for="phone">Nomor HP:</label>
-                    <input type="text" id="phone" name="phone" value="08123456789" style="width: 600px;"> <!-- Atur lebar input -->
+                    <input type="text" id="phone" name="phone" value="{{$data['no_hp']}}" style="width: 600px;" disabled> <!-- Atur lebar input -->
                 </div>
                 <div class="form-group">
                     <label for="address">Alamat:</label>
-                    <input type="text" id="address" name="address" value="Jalan Contoh No. 123" style="width: 600px;"> <!-- Atur lebar input -->
+                    <input type="text" id="address" name="address" value="{{$data['alamat']}}" style="width: 600px;" disabled> <!-- Atur lebar input -->
                 </div>
                 <div class="buttons">
-                    <a href = "/profileedit"><button id="edit-profile-btn">Edit</button></a>
-                    <a href = "/beranda"><button id="edit-profile-btn">Save</button></a>
+                    <a href = "/profile/{{$data['id']}}"><button id="edit-profile-btn">Edit</button></a>
                 </div>
             </div>
         </div>

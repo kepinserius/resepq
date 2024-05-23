@@ -25,7 +25,7 @@
     border-radius: 200px
 }
     body {
-        background-image: url('tomatoes-sauce-with-ingredients-black-wooden-plank.jpg');
+        background-image: url('/tomatoes-sauce-with-ingredients-black-wooden-plank.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -98,39 +98,30 @@
   
           <div class="card bg-glass">
             <div class="card-body px-4 py-5 px-md-5">
-              <form>
-                <!-- 2 column grid layout with text inputs for the first and last names -->
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-md-12 mb-4"> <!-- Mengubah col-md-6 menjadi col-md-12 -->
-                        <div data-mdb-input-init class="form-outline">
-                            <input type="text" id="form3Example1" class="form-control textbox" style="width: 100%;" /> <!-- Menambahkan inline CSS untuk menetapkan lebar 100% -->
-                            <label class="form-label" for="form3Example1">First name</label>
-                        </div>
-                    </div>
-                </div>
-  
+              <form action="/auth/login" method="post">
+                @csrf
                 <!-- Email input -->
                 <div data-mdb-input-init class="form-outline mb-4">
-                  <input type="email" id="form3Example3" class="form-control textbox" /> <!-- Menambahkan kelas "textbox" -->
+                  <input type="email" name="email" id="form3Example3" class="form-control textbox" /> <!-- Menambahkan kelas "textbox" -->
                   <label class="form-label" for="form3Example3">Email</label>
                 </div>
   
                 <!-- Password input -->
                 <div data-mdb-input-init class="form-outline mb-4">
-                  <input type="password" id="form3Example4" class="form-control textbox" /> <!-- Menambahkan kelas "textbox" -->
+                  <input type="password" name="password" id="form3Example4" class="form-control textbox" /> <!-- Menambahkan kelas "textbox" -->
                   <label class="form-label" for="form3Example4">Password</label>
                 </div>
   
                 <!-- Submit button -->
-                <a href="/beranda" class="btn btn-primary btn-block mb-4" role="button">
+                <button type="submit" class="btn btn-primary" style="width: 55rem; border-radius: 50px; margin-top: 5rem;">
                   Sign in
-              </a>
+              </button>
               
   
                 <!-- Register buttons -->
                 <div class="text-center">
                   <div class="text-center">
-                    <a href="/signup" class="button-link">Buat Akun</a>
+                    <a href="/auth/sign" class="button-link">Buat Akun</a>
                 </div>
                 </div>
               </form>

@@ -27,13 +27,23 @@ Route::get('/', function () {
 
 Route::prefix('/admin')->group(function () {
     Route::prefix('/user')->group(function () {
-        Route::get('/', [UserController::class, 'index']);
+        Route::get('/', [UserController::class, 'index'])->middleware('isAdmin');
     });
     Route::prefix('/product')->group(function () {
-        Route::get('/', [ProductController::class, 'index']);
-        Route::post('/', [ProductController::class, 'store']);
-        Route::put('/{id}', [ProductController::class, 'update']);
-        Route::get('/{id}', [ProductController::class, 'destroy']);
+        Route::get('/', [ProductController::class, 'index'])->middleware('isAdmin');
+        Route::post('/', [ProductController::class, 'store'])->middleware('isAdmin');
+        Route::put('/{id}', [ProductController::class, 'update'])->middleware('isAdmin');
+        Route::get('/{id}', [ProductController::class, 'destroy'])->middleware('isAdmin');
+    });
+    Route::prefix('/cart')->group(function() {
+        Route::get('/', [admincartController::class, 'index'])->middleware('isAdmin');
+    });
+    Route::prefix('/pesanan')->group(function() {
+        Route::get('/', [adminpesananController::class, 'index'])->middleware('isAdmin');
+    });
+    Route::prefix('/comment')->group(function() {
+        Route::get('/', [komentarController::class, 'admin'])->middleware('isAdmin');
+        Route::get('/{id}', [komentarController::class, 'destroy'])->middleware('isAdmin');
     });
 });
 
@@ -50,35 +60,37 @@ Route::prefix('/auth')->group(function () {
         });
         Route::post('/', [loginController::class, 'login']);
     });
-    Route::get('/logout', [loginController::class, 'logout']);
+    Route::get('/logout', [loginController::class, 'logout'])->middleware('myAuth');
 });
 
 Route::prefix('/profile')->group(function () {
-    Route::get('/', [profileController::class, 'showProfilePage']);
-    Route::get('/{id}', [profileController::class, 'show']);
-    Route::put('/{id}', [UserController::class, 'update']);
+    Route::get('/', [profileController::class, 'showProfileForm'])->middleware('myAuth');
+    Route::get('/{id}', [profileController::class, 'show'])->middleware('myAuth');
+    Route::put('/{id}', [UserController::class, 'update'])->middleware('myAuth');
 });
 
+Route::prefix('/detail')->group(function () {
+    Route::get('/{id}', [detailController::class, 'index'])->middleware('myAuth');
+});
 
-Route::get('/admin/create', [adminController::class, 'create']);
-Route::get('/admin/edit', [adminController::class, 'edit']);
-Route::get('/admin/delete', [adminController::class, 'destroy']);
-Route::post('/admin', [App\Http\Controllers\adminController::class, 'store'])->name('admin.store');
-Route::put('/admin/{id}', [App\Http\Controllers\adminController::class, 'update']);
-Route::get('/admin/delete/{id}', [App\Http\Controllers\adminController::class, 'destroy']);
-Route::get('/login', [loginController::class, 'index']);
-Route::get('/signup', [signupController::class, 'index']);
-Route::get('/profile', [profileController::class, 'showProfileForm'])->name('/profile');
-Route::get('/profileedit', [profileeditController::class, 'showProfileeditForm'])->name('/profileedit');
-Route::get('/beranda', [berandaController::class, 'index']);
-Route::get('/detail', [detailController::class, 'index']);
-Route::get('/shop', [shopController::class, 'index']);
-Route::get('/shop1', [shop1Controller::class, 'index']);
-Route::get('/shop2', [shop2Controller::class, 'index']);
-Route::get('/keranjang', [keranjangController::class, 'index']);
-Route::get('/checkout', [checkoutController::class, 'index']);
-Route::get('/komentar', [komentarController::class, 'index']);
+Route::prefix('/keranjang')->group(function () {
+    Route::get('/', [keranjangController::class, 'index'])->middleware('myAuth');
+    Route::get('/{id}', [keranjangController::class, 'destroy'])->middleware('myAuth');
+    Route::post('/', [keranjangController::class, 'store'])->middleware('myAuth');
+    Route::put('/{id}', [keranjangController::class, 'updateJson'])->middleware('myAuth');
+});
+
+Route::prefix('/checkout')->group(function() {
+    Route::get('/', [checkoutController::class, 'index'])->middleware('myAuth');
+    Route::get('/{id}', [checkoutController::class, 'checkOut'])->middleware('myAuth');
+
+});
+
+Route::prefix('/komentar')->group(function() {
+    Route::get('/', [komentarController::class, 'index'])->middleware('myAuth');
+    Route::post('/', [komentarController::class, 'store'])->middleware('myAuth');
+});
+
+Route::get('/beranda', [berandaController::class, 'index'])->middleware('myAuth');
+
 Route::get('/tentang', [tentangController::class, 'index']);
-Route::get('/adminproduk', [adminprodukController::class, 'index']);
-Route::get('/admincart', [admincartController::class, 'index']);
-Route::get('/adminpesanan', [adminpesananController::class, 'index']);

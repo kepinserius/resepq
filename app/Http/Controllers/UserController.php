@@ -26,12 +26,12 @@ class UserController extends Controller
                     'role' => 'user'
                 ])
                     ? redirect('/auth/login')->with('sukses', 'berhasil menambahkan data')
-                    : redirect()->back()->with('gagal', 'gagal menambahkan data');
+                    : redirect()->back()->with('alert', 'gagal menambahkan data');
             } else {
-                return redirect()->back()->with('gagal', 'Password tidak sama');
+                return redirect()->back()->with('alert', 'Password tidak sama');
             }
         } else {
-            return redirect()->back()->with('gagal', 'email telah terdaftar');
+            return redirect()->back()->with('alert', 'email telah terdaftar');
         }
     }
 

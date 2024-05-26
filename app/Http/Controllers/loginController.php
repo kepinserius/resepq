@@ -19,18 +19,18 @@ class loginController extends Controller
         $validate = $this->getUser($request->email);
 
         if ($validate['data'] === null) {
-            return redirect()->back()->with('gagal', 'email yang anda masukkan salah');
+            return redirect()->back()->with('alert', 'email yang anda masukkan salah');
         } else {
             $this->createSession($request, $validate['data']);
 
             if ($validate['data']['role'] === 'user') {
                 return password_verify($request->password, $validate['data']['password'])
                     ? redirect('/beranda')
-                    : redirect()->back()->with('gagal', 'password yang anda masukkan salah');
+                    : redirect()->back()->with('alert', 'password yang anda masukkan salah');
             } else {
                 return password_verify($request->password, $validate['data']['password'])
                     ? redirect('/admin/user')
-                    : redirect()->back()->with('gagal', 'password yang anda masukkan salah');
+                    : redirect()->back()->with('alert', 'password yang anda masukkan salah');
             }
         }
     }

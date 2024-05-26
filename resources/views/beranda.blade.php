@@ -101,11 +101,8 @@
            
       
    </div>
-</div>
-          </div>
       </nav>
   </div>
-   </div>
    <!-- header section end -->
     
    <!-- booking section start -->
@@ -137,46 +134,23 @@
       <div class="container">
          <div class="services_section_2 layout_padding">
             <div class="row">
+               @foreach ($data as $item)
                <div class="col-md-6">
-                  <a href="/detail" class="box_main">
+                  <a href="/detail/{{$item->id}}" class="box_main">
                      <div class="left_main">
-                         <div class="cup_img_1"><img src="bolaudang.png"></div>
+                         <div class="cup_img_1"><img src="{{asset('uploads/products/'.$item->picture)}}" style="max-width: 15rem"></div>
                      </div>
                      <div class="middle_main">
                          <div class="border_10 active"></div>
                      </div>
                      <div class="right_main">
-                         <h6 class="milk_text">Bola Udang</h6>
-                         <h1 class="price_text">15k</h1>
+                         <h6 class="milk_text">{{$item->name}}</h6>
+                         <h1 class="price_text">{{$item->harga}}</h1>
                      </div>
                  </a>
-                 
-                  <a href="/detail" class="box_main">
-                     <div class="left_main">
-                        <div class="cup_img_1"><img src="ayamgoreng.png"></div>
-                     </div>
-                     <div class="middle_main">
-                        <div class="border_10"></div>
-                     </div>
-                     <div class="right_main">
-                        <h6 class="milk_text">Ayam Goreng</h6>
-                        <h1 class="price_text">15k</h1>
-                     </div>
-                  </a>
-                  <a href="/detail" class="box_main">
-                     <div class="left_main">
-                        <div class="cup_img_1"><img src="corndog.png"></div>
-                     </div>
-                     <div class="middle_main">
-                        <div class="border_10"></div>
-                     </div>
-                     <div class="right_main">
-                        <h6 class="milk_text">Corndog</h6>
-                        <h1 class="price_text">13k</h1>
-                     </div>
-                  </a>
                </div>
-               <div class="col-md-6">
+               @endforeach
+               {{-- <div class="col-md-6">
                   <a href="/detail" class="box_main">
                      <div class="left_main">
                         <div class="cup_img_1"><img src="nasigorengayam.png"></div>
@@ -213,7 +187,7 @@
                         <h1 class="price_text">20k</h1>
                      </div>
                   </a>
-               </div>
+               </div> --}}
             </div>
          </div>
          <div class="see_bt"><a href="/shop">Lihat Lainnya</a></div>
@@ -273,7 +247,7 @@
             openEffect: "none",
             closeEffect: "none"
          });
-
+      })
    </script>
    <script>
             $(document).ready(function () {
@@ -326,4 +300,10 @@
 		</footer>
 </body>
 
-</html>
+<script>
+   let message = '{{Session::get('alert')}}'
+   let exist = '{{Session::has('alert')}}'
+   if(exist) {
+      alert(message)
+   }
+   </script>

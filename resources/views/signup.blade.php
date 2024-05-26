@@ -82,13 +82,6 @@
 <!-- Section: Design Block -->
 <section class="background-radial-gradient overflow-hidden">
     <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
-      @if (Session::has('gagal'))
-      <div class="pt-3">
-          <div class="alert alert-danger alert-block" style="z-index: 1">
-              {{ Session::get('gagal') }}
-          </div>
-      </div>
-  @endif
       <div class="signup-title">
         <h2>Signup</h2>
     </div>
@@ -133,3 +126,10 @@
 </body>
 </html>
 
+<script>
+  let message = '{{Session::get('alert')}}'
+  let exist = '{{Session::has('alert')}}'
+  if (exist) {
+    alert(messasge)
+  }
+</script>

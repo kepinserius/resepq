@@ -51,9 +51,9 @@
         </div> --}}
           <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                  <a href="/login" class="nav-item nav-link" href="index.html">Home</a>
-                  <a href="/login" class="nav-item nav-link" href="about.html">Comment</a>
-                  <a href="/login" class="nav-item nav-link" href="contact.html">About</a>
+                  <a href="/beranda" class="nav-item nav-link" href="index.html">Home</a>
+                  <a href="/komentar" class="nav-item nav-link" href="about.html">Comment</a>
+                  <a href="/about" class="nav-item nav-link" href="contact.html">About</a>
               </div>
               <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
                <li style="position: relative;"> <!-- Tambahkan style position: relative; untuk membuat posisi absolut relatif terhadap elemen ini -->

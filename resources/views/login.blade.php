@@ -134,3 +134,11 @@
   <!-- Section: Design Block -->
 </body>
 </html>
+
+<script>
+  let message = '{{Session::get('alert')}}'
+  let exist = '{{Session::has('alert')}}'
+  if (exist) {
+    alert(messasge)
+  }
+</script>

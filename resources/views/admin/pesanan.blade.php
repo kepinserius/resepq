@@ -12,7 +12,7 @@
 <link href="{{ asset('css/admin.css') }}" rel="stylesheet" type="text/css" >
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+</head>
   <body>
     <div class="sidebar">
         <a href="/admin/user">User</a>
@@ -20,17 +20,21 @@
         <a href="/admin/cart">Keranjang</a>
         <a href="/admin/pesanan">Pesanan</a>
         <a href="/admin/comment">Komentar</a>
-        <a href="/admin_tema" style="margin-top: 31rem;">Logout</a>
+        <a href="/auth/logout" style="margin-top: 31rem;">Logout</a>
     </div>
     <div class="container">
         <div class="table-wrapper">
+            @if (Session::has('success'))
+                <div class="pt-3">
+                    <div class="alert alert-success">
+                        {{ Session::get('success') }}
+                    </div>
+                </div>
+            @endif
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-						<h2 style="color: #566787">User</h2>
-					</div>
-					<div class="col-sm-6">
-											
+						<h2>Pesanan</h2>
 					</div>
                 </div>
             </div>
@@ -40,8 +44,9 @@
                         <th>No</th>
                         <th>Nama</th>
                         <th>Alamat</th>
-                        <th>No.Hp</th>
-                        <th>Email</th>
+                        <th>No Telepon</th>
+                        <th>Product</th>
+                        <th>Total</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -49,13 +54,22 @@
                     @foreach ($data as $item)
                     <tr>
                         <td>{{ $i++ }}</td>
-                        <td>{{ $item->name }}</td>
-                        <td>{{ $item->alamat }}</td>
-                        <td>{{ $item->no_hp }}</td>
-                        <td>{{ $item->email }}</td>
+                        <td>{{ $item->user->name }}</td>
+                        <td>{{ $item->user->alamat }}</td>
+                        <td>{{ $item->user->no_hp }}</td>
+                        <td>
+                            <ul>
+                                @foreach ($item->items as $products)
+                                <li>{{$products->product->name}}</li>
+                                @endforeach
+                            </ul>
+                        </td>
+                        <td>{{formatRupiah($item->total)}}</td>
                     </tr>
                     @endforeach
                 </tbody>
             </table>
         </div>
     </div>
+  </body>
+</html>

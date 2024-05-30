@@ -14,6 +14,7 @@ class ProductController extends Controller
         return view('admin.dumpProduct', ['data' => Product::get()]);
     }
 
+
     public function store(Request $request)
     {
         return Product::insert([

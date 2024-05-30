@@ -92,5 +92,6 @@ Route::prefix('/komentar')->group(function() {
 });
 
 Route::get('/beranda', [berandaController::class, 'index'])->middleware('myAuth');
+Route::get('/home', [berandaController::class, 'getAllData'])->middleware('myAuth');
 
 Route::get('/tentang', [tentangController::class, 'index']);

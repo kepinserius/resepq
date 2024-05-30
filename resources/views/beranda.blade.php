@@ -31,6 +31,8 @@
    <link rel="stylesoeet" href="css/owl.theme.default.min.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
       media="screen">
+      
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 
 <body>
@@ -134,9 +136,10 @@
       <div class="container">
          <div class="services_section_2 layout_padding">
             <div class="row">
+               <?php $i = 0 ?>
                @foreach ($data as $item)
                <div class="col-md-6">
-                  <a href="/detail/{{$item->id}}" class="box_main">
+                  <a href="/detail/{{$item->id}}" class="box_main" id="{{ $i++ }}">
                      <div class="left_main">
                          <div class="cup_img_1"><img src="{{asset('uploads/products/'.$item->picture)}}" style="max-width: 15rem"></div>
                      </div>
@@ -150,47 +153,9 @@
                  </a>
                </div>
                @endforeach
-               {{-- <div class="col-md-6">
-                  <a href="/detail" class="box_main">
-                     <div class="left_main">
-                        <div class="cup_img_1"><img src="nasigorengayam.png"></div>
-                     </div>
-                     <div class="middle_main">
-                        <div class="border_10"></div>
-                     </div>
-                     <div class="right_main">
-                        <h6 class="milk_text">Nasi Goreng</h6>
-                        <h1 class="price_text">15k</h1>
-                     </div>
-                  </a>
-                  <a href="/detail" class="box_main">
-                     <div class="left_main">
-                        <div class="cup_img_1"><img src="lumpia.png"></div>
-                     </div>
-                     <div class="middle_main">
-                        <div class="border_10"></div>
-                     </div>
-                     <div class="right_main">
-                        <h6 class="milk_text">Lumpia</h6>
-                        <h1 class="price_text">12k</h1>
-                     </div>
-                  </a>
-                  <a href="/detail" class="box_main">
-                     <div class="left_main">
-                        <div class="cup_img_1"><img src="ayambakar.png"></div>
-                     </div>
-                     <div class="middle_main">
-                        <div class="border_10"></div>
-                     </div>
-                     <div class="right_main">
-                        <h6 class="milk_text">Ayam Bakar</h6>
-                        <h1 class="price_text">20k</h1>
-                     </div>
-                  </a>
-               </div> --}}
             </div>
          </div>
-         <div class="see_bt"><a href="/shop">Lihat Lainnya</a></div>
+         <div class="see_bt"><a href="/home#10">Lihat Lainnya</a></div>
       </div>
    </div>
    <!-- services section end -->

@@ -10,6 +10,11 @@ class BerandaController extends Controller
     // Metode untuk menampilkan halaman login
     public function index()
     {
-        return view('beranda', ['data' => Product::get()]);
+        $data = Product::all()->take(10);
+        return view('beranda', ['data' => $data]);
+    }
+
+    public function getAllData() {
+        return view('product2', ['data' => Product::get()]);
     }
 }

@@ -57,7 +57,7 @@
                     <tr>
                         <td>{{ $i++ }}</td>
                         <td>{{ $item->name }}</td>
-                        <td>
+                        {{-- <td>
                             <ul>
                                 @foreach(json_decode($item->bahan) as $bahan)
                                     <li>{{ $bahan }}</li>
@@ -70,7 +70,7 @@
                                     <li>{{ $masak }}</li>
                                 @endforeach
                             </ul>
-                        </td>
+                        </td> --}}
                         <td>{{formatRupiah($item->harga)}}</td>
                         <td>
                             <a href="#editEmployeeModal{{ $item->id }}" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
@@ -134,13 +134,13 @@
                                             <label>Cara Masak</label>
                                             <div id="fieldMasakUpdate{{$item->id}}">
                                                 <?php $indexMasak = 0 ?>
-                                                @foreach(json_decode($item->masak) as $masak)
+                                                {{-- @foreach(json_decode($item->masak) as $masak)
                                                 <div class="input-group masakUpdate" id="masakUpdate{{$indexMasak}}" style="margin-bottom: 10px">
                                                     <input type="text" class="form-control" placeholder="Cara Masak" value="{{$masak}}" name="masak[{{$indexMasak}}]" aria-describedby="basic-addon2">
                                                     <a class="input-group-addon glyphicon glyphicon-minus" onclick="return checkMasakUpdate(event)" id="rmvMasakUpdate{{$indexMasak++}}" style="background: none; border: none; text-decoration: none;"></a>
                                                 </div>
                                             </div>
-                                            @endforeach
+                                            @endforeach --}}
                                             <button class="btn btn-default addMasakUpdate" type="button" id="addMasakUpdate" style="border-radius: 10px"><i class="glyphicon glyphicon-plus"></i> Bahan</button>
                                         </div>
                                         <div class="form-group">

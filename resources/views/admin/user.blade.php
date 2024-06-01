@@ -30,8 +30,8 @@
 						<h2 style="color: #566787">User</h2>
 					</div>
 					<div class="col-sm-6">
-											
-					</div>
+                        <a href='#addEmployeeModal' class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Tambah Akun Admin</span></a>
+                    </div>
                 </div>
             </div>
             <table class="table table-striped table-hover">
@@ -39,9 +39,10 @@
                     <tr>
                         <th>No</th>
                         <th>Nama</th>
+                        <th>Email</th>
                         <th>Alamat</th>
                         <th>No.Hp</th>
-                        <th>Email</th>
+                        <th>Role</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -50,12 +51,40 @@
                     <tr>
                         <td>{{ $i++ }}</td>
                         <td>{{ $item->name }}</td>
+                        <td>{{ $item->email }}</td>
                         <td>{{ $item->alamat }}</td>
                         <td>{{ $item->no_hp }}</td>
-                        <td>{{ $item->email }}</td>
+                        <td>{{ $item->role }}</td>
                     </tr>
                     @endforeach
                 </tbody>
             </table>
+            <div id="addEmployeeModal" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <form action='' method="POST">
+                            @csrf
+                            <div class="modal-header">
+                                <h4 class="modal-title">Add Admin User</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="text" class="form-control" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input type="password" class="form-control" name="password" required>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                                <input type="submit" class="btn btn-success" value="Save">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>	
         </div>
     </div>

@@ -28,6 +28,7 @@ Route::get('/', function () {
 Route::prefix('/admin')->group(function () {
     Route::prefix('/user')->group(function () {
         Route::get('/', [UserController::class, 'index'])->middleware('isAdmin');
+        Route::post('/', [UserController::class, 'createAdmin'])->middleware('isAdmin');
     });
     Route::prefix('/product')->group(function () {
         Route::get('/', [ProductController::class, 'index'])->middleware('isAdmin');
@@ -94,4 +95,4 @@ Route::prefix('/komentar')->group(function() {
 Route::get('/beranda', [berandaController::class, 'index'])->middleware('myAuth');
 Route::get('/home', [berandaController::class, 'getAllData'])->middleware('myAuth');
 
-Route::get('/tentang', [tentangController::class, 'index']);
+Route::get('/tentang', [tentangController::class, 'index'])->middleware('myAuth');

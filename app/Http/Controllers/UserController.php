@@ -11,7 +11,7 @@ class UserController extends Controller
 {
     public function index()
     {
-        return view('admin.user', ['data' => User::where('role', 'user')->get()]);
+        return view('admin.user', ['data' => User::get()]);
     }
 
     public function store(Request $request)
@@ -26,6 +26,27 @@ class UserController extends Controller
                     'role' => 'user'
                 ])
                     ? redirect('/auth/login')->with('sukses', 'berhasil menambahkan data')
+                    : redirect()->back()->with('alert', 'gagal menambahkan data');
+            } else {
+                return redirect()->back()->with('alert', 'Password tidak sama');
+            }
+        } else {
+            return redirect()->back()->with('alert', 'email telah terdaftar');
+        }
+    }
+
+    public function createAdmin(Request $request)
+    {
+        $getUser = User::where('email', $request->email)->first();
+        if (!$getUser) {
+            if ($request->password == $request->confirm) {
+                return User::insert([
+                    'name' => $request->name,
+                    'email' => $request->email,
+                    'password' => bcrypt($request->password),
+                    'role' => 'admin'
+                ])
+                    ? redirect('/admin/user')->with('sukses', 'berhasil menambahkan data')
                     : redirect()->back()->with('alert', 'gagal menambahkan data');
             } else {
                 return redirect()->back()->with('alert', 'Password tidak sama');

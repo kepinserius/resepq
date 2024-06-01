@@ -24,6 +24,13 @@
     </div>
     <div class="container">
         <div class="table-wrapper">
+            @if (Session::has('sukses'))
+            <div class="pt-3">
+                <div class="alert alert-success">
+                    {{ Session::get('sukses') }}
+                </div>
+            </div>
+        @endif
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
@@ -88,3 +95,10 @@
             </div>	
         </div>
     </div>
+    <script>
+        let msg = '{{Session::get('alert')}}'
+        let exist = '{{Session::has('alert')}}'
+        if (exist) {
+            alert(msg)
+        }
+    </script>

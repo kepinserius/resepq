@@ -39,18 +39,13 @@ class UserController extends Controller
     {
         $getUser = User::where('email', $request->email)->first();
         if (!$getUser) {
-            if ($request->password == $request->confirm) {
-                return User::insert([
-                    'name' => $request->name,
-                    'email' => $request->email,
-                    'password' => bcrypt($request->password),
-                    'role' => 'admin'
-                ])
-                    ? redirect('/admin/user')->with('sukses', 'berhasil menambahkan data')
-                    : redirect()->back()->with('alert', 'gagal menambahkan data');
-            } else {
-                return redirect()->back()->with('alert', 'Password tidak sama');
-            }
+            return User::insert([
+                'email' => $request->email,
+                'password' => bcrypt($request->password),
+                'role' => 'admin'
+            ])
+                ? redirect('/admin/user')->with('sukses', 'berhasil menambahkan data')
+                : redirect()->back()->with('alert', 'gagal menambahkan data');
         } else {
             return redirect()->back()->with('alert', 'email telah terdaftar');
         }

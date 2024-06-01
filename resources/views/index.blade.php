@@ -158,7 +158,7 @@
          </div>
      </div>
      <div class="container">
-         <div class="play_icon"><a href="/login"><img src="play-icon.png"></a></div>
+         <div class="play_icon"><a href="/auth/login"><img src="play-icon.png"></a></div>
      </div>
      
       <!-- banner section end -->
@@ -176,7 +176,7 @@
                            <h1 class="about_taital">Tentang Kami</h1>
                            <p class="about_text">Website resep dengan tata cara serta bahan yang harus digunakan paling lengkap
                            </p>
-                           <div href = "/login" class="readmore_bt"><a href="/login">Read More</a></div>
+                           <div href = "/auth/login" class="readmore_bt"><a href="/auth/login">Read More</a></div>
                         </div>
                      </div>
                      <div class="col-md-6 ">
@@ -193,7 +193,7 @@
                            <h1 class="about_taital">Tujuan Kami</h1>
                            <p class="about_text">Memudahkan para Ibu Ibu atau para mahasiswa untuk memasak karena tidak harus membeli bahan makanan secara terpisah
                            </p>
-                           <div href = "/login" class="readmore_bt"><a href="/login">Read More</a></div>
+                           <div href = "/auth/login" class="readmore_bt"><a href="/auth/login">Read More</a></div>
                         </div>
                      </div>
                      <div class="col-md-6 ">
@@ -210,7 +210,7 @@
                            <h1 class="about_taital">Kelebihan Kami</h1>
                            <p class="about_text">Efisiensi waktu untuk berbelanja bahan makanan dan juga dapat melihat resep makanan indonesia secara lengkap beserta tata cara memasaknya
                            </p>
-                           <div href = "/login" class="readmore_bt"><a href="/login">Read More</a></div>
+                           <div href = "/auth/login" class="readmore_bt"><a href="/auth/login">Read More</a></div>
                         </div>
                      </div>
                      <div class="col-md-6 ">

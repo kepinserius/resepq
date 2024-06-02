@@ -10,7 +10,7 @@ class checkoutController extends Controller
     // Metode untuk menampilkan halaman login
     public function index()
     {
-        $data = Keranjang::with('user', 'items', 'items.product')->where('user_id', session('id'))->first();
+        $data = Keranjang::with('user', 'items', 'items.product')->where([['user_id', '=' , session('id')], ['status', '=', false]])->first();
         // dd($data->user->toArray());
         if ($data->user->no_hp === null && $data->user->alamat === null) {
             return redirect()->back()->with('alert', 'Lengkapi Profil Anda !!!');

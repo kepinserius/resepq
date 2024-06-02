@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+~<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -126,7 +126,7 @@
           <link rel="stylesheet" href="styles.css">
       </head>
       <body>
-         <div class="container" style="max-width: 800px; margin: 0 auto; padding: 1px; text-align: center;">
+         <div class="container"  style="max-width: 800px; margin: 0 auto; padding: 1px; text-align: center;">
             <h1 style="text-align: center;">{{$data['name']}}</h1>
             <div class="content" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; margin-top: 20px;">
                 <div class="image" style="margin-right: 20px;">

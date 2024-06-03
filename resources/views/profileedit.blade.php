@@ -13,7 +13,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body style="background-color: #ffffff;">
+<body style="background-color: #c1c0c0;">
     <div class="container">
         <form action="" method="post" enctype="multipart/form-data">
             @csrf
@@ -48,9 +48,7 @@
                     <label for="address">Alamat:</label>
                     <input type="text" id="address" name="address" value="{{$data['alamat']}}" style="width: 600px;" required> <!-- Atur lebar input -->
                 </div>
-                <div class="buttons">
-                    <button id="edit-profile-btn" type="submit">Save</button>
-                </div>
+                <a href="/profile"><button id="edit-profile-btn" type="submit" class="bn632-hover bn20">Simpan</button></a>
             </div>
         </div>
         </form>

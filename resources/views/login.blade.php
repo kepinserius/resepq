@@ -75,6 +75,19 @@
           border-radius: 5px;
       }
 
+      .btn-primary {
+    background-color: #FC6736; /* Mengubah warna background tombol menjadi hitam */
+    color: white; /* Mengubah warna teks menjadi putih */
+    border: none;
+    width: 100%; 
+    border-radius: 50px;
+    margin-top: 5rem;
+  }
+
+  .btn-primary:hover {
+    background-color: #3e3434; /* Warna saat tombol di-hover */
+  }
+
 </style>
 </head>
 <body>

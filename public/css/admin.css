@@ -6,7 +6,7 @@ body {
 }
 
 .pt-3{
-    background-color: #91c6f1;
+    background-color: #FC6736;
 }
 .navbar-logo {
     width: 150px; /* Mengatur lebar gambar */
@@ -76,7 +76,7 @@ body {
 }
 
 .table-wrapper {
-    background: rgb(205, 229, 236);
+    background: #afd4df;
     padding: 20px 25px;
     margin: 30px 0;
     border-radius: 20px;
@@ -84,7 +84,7 @@ body {
 }
 .table-title {        
     padding-bottom: 15px;
-    background: rgb(175, 212, 223);
+    background: #afd4df;
     color: #fff;
     padding: 16px 30px;
     margin: -20px -25px 10px;

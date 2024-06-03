@@ -51,9 +51,9 @@
         </div> --}}
           <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                  <a href="/beranda" class="nav-item nav-link" href="index.html">Home</a>
-                  <a href="/komentar" class="nav-item nav-link" href="about.html">Comment</a>
-                  <a href="/about" class="nav-item nav-link" href="contact.html">About</a>
+                  <a href="/auth/login" class="nav-item nav-link" href="index.html">Home</a>
+                  <a href="/auth/login" class="nav-item nav-link" href="about.html">Comment</a>
+                  <a href="/auth/login" class="nav-item nav-link" href="contact.html">About</a>
               </div>
               <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
                <li style="position: relative;"> <!-- Tambahkan style position: relative; untuk membuat posisi absolut relatif terhadap elemen ini -->
@@ -252,84 +252,84 @@
          <div class="services_section_2 layout_padding">
             <div class="row">
                <div class="col-md-6">
-                  <div class="box_main active">
+                  <div class="box_main">
                      <div class="left_main">
-                        <div class="cup_img_1"><img src="cup-img-1.png"></div>
+                        <div class="cup_img_1"><img src="bakso.png"></div>
                      </div>
                      <div class="middle_main">
                         <div class="border_10 active"></div>
                      </div>
                      <div class="right_main">
-                        <h6 class="milk_text">Milk Tea</h6>
-                        <h1 class="price_text">$10</h1>
+                        <h6 class="milk_text">Bakso</h6>
+                        <h1 class="price_text">30.000</h1>
                      </div>
                   </div>
                   <div class="box_main">
                      <div class="left_main">
-                        <div class="cup_img_1"><img src="cup-img-2.png"></div>
+                        <div class="cup_img_1"><img src="Soto.png"></div>
                      </div>
                      <div class="middle_main">
                         <div class="border_10"></div>
                      </div>
                      <div class="right_main">
-                        <h6 class="milk_text">Yellow Tea</h6>
-                        <h1 class="price_text">$20</h1>
+                        <h6 class="milk_text">Soto</h6>
+                        <h1 class="price_text">40.000</h1>
                      </div>
                   </div>
                   <div class="box_main">
                      <div class="left_main">
-                        <div class="cup_img_1"><img src="cup-img-3.png"></div>
+                        <div class="cup_img_1"><img src="sate.png"></div>
                      </div>
                      <div class="middle_main">
                         <div class="border_10"></div>
                      </div>
                      <div class="right_main">
-                        <h6 class="milk_text">Green Tea</h6>
-                        <h1 class="price_text">$20</h1>
+                        <h6 class="milk_text">Sate</h6>
+                        <h1 class="price_text">45.000</h1>
                      </div>
                   </div>
                </div>
                <div class="col-md-6">
                   <div class="box_main">
                      <div class="left_main">
-                        <div class="cup_img_1"><img src="cup-img-4.png"></div>
+                        <div class="cup_img_1"><img src="tahugejrot.png"></div>
                      </div>
                      <div class="middle_main">
                         <div class="border_10"></div>
                      </div>
                      <div class="right_main">
-                        <h6 class="milk_text">Red Tea</h6>
-                        <h1 class="price_text">$10</h1>
+                        <h6 class="milk_text">Tahu Gejrot</h6>
+                        <h1 class="price_text">20.000</h1>
                      </div>
                   </div>
                   <div class="box_main">
                      <div class="left_main">
-                        <div class="cup_img_1"><img src="cup-img-5.png"></div>
+                        <div class="cup_img_1"><img src="miegoreng.png"></div>
                      </div>
                      <div class="middle_main">
                         <div class="border_10"></div>
                      </div>
                      <div class="right_main">
-                        <h6 class="milk_text">Red Tea</h6>
-                        <h1 class="price_text">$10</h1>
+                        <h6 class="milk_text">Mie Goreng</h6>
+                        <h1 class="price_text">15.000</h1>
                      </div>
                   </div>
                   <div class="box_main">
                      <div class="left_main">
-                        <div class="cup_img_1"><img src="cup-img-5.png"></div>
+                        <div class="cup_img_1"><img src="gadogado.png"></div>
                      </div>
                      <div class="middle_main">
                         <div class="border_10"></div>
                      </div>
                      <div class="right_main">
-                        <h6 class="milk_text">Red Tea</h6>
-                        <h1 class="price_text">$10</h1>
+                        <h6 class="milk_text">Gado Gado</h6>
+                        <h1 class="price_text">15.000</h1>
                      </div>
                   </div>
                </div>
             </div>
          </div>
-         <div class="see_bt"><a href="/login">See More</a></div>
+         <div class="see_bt"><a href="/auth/login">Lihat Lainnya</a></div>
       </div>
    </div>
    <!-- services section end -->
@@ -341,21 +341,21 @@
                <div class="container">
                   <h1 class="shop_taital">Top 3 Makanan Bulan Ini</h1>
                   <p class="shop_text">Makanan paling laris dilihat oleh para user dalam bulan ini</p>
-                  <div><img src="foto_awal.png" class="image_3"></div>
+                  <div><img src="sotopanjang.png" class="image_3"></div>
                </div>
             </div>
             <div class="carousel-item">
                <div class="container">
                   <h1 class="shop_taital">Top 3 Makanan Bulan Ini</h1>
                   <p class="shop_text">Makanan paling laris dilihat oleh para user dalam bulan ini/p>
-                  <div><img src="foto_awal.png" class="image_3"></div>
+                  <div><img src="satepanjang.png" class="image_3"></div>
                </div>
             </div>
             <div class="carousel-item">
                <div class="container">
                   <h1 class="shop_taital">Top 3 Makanan Bulan Ini</h1>
                   <p class="shop_text">Makanan paling laris dilihat oleh para user dalam bulan ini</p>
-                  <div><img src="foto_awal.png" class="image_3"></div>
+                  <div><img src="baksopanjang.png" class="image_3"></div>
                </div>
             </div>
          </div>

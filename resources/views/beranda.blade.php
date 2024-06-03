@@ -169,22 +169,23 @@
             <div class="carousel-item active">
                <div class="container" >
                   <h1 class="shop_taital">Top 3 Makanan Bulan Ini</h1>
-                  <p class="shop_text">Makanan paling laris dilihat oleh para user dalam bulan ini</p>
-                  <div><img src="pancake.png" class="image_3"></div>
+                  <p class="shop_text">Soto adalah sup tradisional Indonesia yang kaya akan rempah-rempah, biasanya berisi daging (ayam, sapi, atau kambing), bihun, tauge, dan telur rebus. Hidangan ini disajikan dengan pelengkap seperti kerupuk, bawang goreng, dan sambal untuk menambah cita rasa. Soto memiliki banyak variasi regional, seperti Soto Ayam, Soto Betawi, dan Soto Lamongan.</p>
+                  <div><img src="sotopanjang.png" class="image_3"></div>
                </div>
             </div>
             <div class="carousel-item">
                <div class="container" >
                   <h1 class="shop_taital">Top 3 Makanan Bulan Ini</h1>
-                  <p class="shop_text">Makanan paling laris dilihat oleh para user dalam bulan ini/p>
-                  <div><img src="burger.png" class="image_3"></div>
+                  <p class="shop_text">Sate adalah hidangan khas Indonesia yang terdiri dari potongan daging (ayam, kambing, sapi, atau lainnya) yang ditusuk menggunakan tusukan bambu, kemudian dipanggang di atas arang. Daging sate biasanya disajikan dengan bumbu kacang, kecap manis, atau sambal, serta dilengkapi dengan potongan lontong atau nasi. Sate memiliki banyak variasi regional, termasuk Sate Madura, Sate Padang, dan Sate Lilit Bali.</p>
+                  <div><img src="satepanjang.png" class="image_3"></div>
                </div>
             </div>
             <div class="carousel-item">
                <div class="container">
                   <h1 class="shop_taital">Top 3 Makanan Bulan Ini</h1>
-                  <p class="shop_text">Makanan paling laris dilihat oleh para user dalam bulan ini</p>
-                  <div><img src="nasitelur.png" class="image_3"></div>
+                  <p class="shop_text">
+                     Bakso adalah hidangan khas Indonesia berupa bola daging yang terbuat dari campuran daging sapi giling, tepung tapioka, dan bumbu-bumbu. Bakso biasanya disajikan dalam kuah kaldu yang gurih, dilengkapi dengan mie, bihun, tahu, dan sayuran, serta diberi taburan daun seledri dan bawang goreng.</p>
+                  <div><img src="baksopanjang.png" class="image_3"></div>
                </div>
             </div>
          </div>

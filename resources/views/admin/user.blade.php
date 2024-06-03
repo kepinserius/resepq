@@ -20,7 +20,7 @@
         <a href="/admin/cart">Keranjang</a>
         <a href="/admin/pesanan">Pesanan</a>
         <a href="/admin/comment">Komentar</a>
-        <a href="/admin_tema" style="margin-top: 31rem;">Logout</a>
+        <a href="/auth/logout" style="margin-top: 31rem;">Logout</a>
     </div>
     <div class="container">
         <div class="table-wrapper">

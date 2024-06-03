@@ -13,31 +13,38 @@
 
 <style>
   .textbox {
-    width: 100%; /* Setiap textbox mengisi lebar container */
-    max-width: 800px; /* Lebar maksimum setiap textbox */
-    border-radius: 150px
-}
+    width: 100%; 
+    max-width: 800px; 
+    border-radius: 150px;
+    margin-bottom: 15px;
+    padding-left: 50px;  /* Menambahkan padding kiri */
+    padding-right: 50px;
+  }
 
-.btn-block {
-    width: auto; /* Atur lebar sesuai dengan isi tombol */
-    margin-left: 400px; 
+  .btn-block {
+    width: 100%; 
     border-radius: 200px;
-}
+    max-width: 800px;
+    margin: auto;
+    background-color: black;
+    color: white; 
+  }
 
+  body {
+    background-image: url('/flat-lay-composition-mexican-food-with-copyspace.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Set tinggi ke 100% dari viewport */
+    position: relative;
+    margin: 0;
+  }
 
-    body {
-        background-image: url('/flat-lay-composition-mexican-food-with-copyspace.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: bottom;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh; /* Set tinggi ke 100% dari viewport */
-    }
-
-    body::before {
+  body::before {
     content: '';
     position: absolute;
     top: 0;
@@ -46,90 +53,94 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.5); /* Warna hitam transparan */
     backdrop-filter: blur(0.3px);
-}
+    z-index: -1;
+  }
 
-/* Gaya CSS untuk textbox */
-/* .textbox {
-      width: 100%; /* Setiap textbox memiliki lebar 100% */
-      /* background-color: rgb(255, 255, 255); Memberikan warna biru pada latar belakang textbox
-      color: rgb(243, 170, 81); Memberikan warna hitam pada teks dalam textbox
-      border: none; Menghapus border agar lebih rapi
-      padding: 10px; Menambahkan padding agar textbox terlihat lebih baik
-      margin-top: 20px; Menambahkan margin-top agar textbox sedikit lebih ke bawah
-    } */ 
+  .form-label {
+    color: rgb(255, 255, 255); 
+  }
 
-    
-    .form-label {
-      color: rgb(212, 156, 92); 
-    }
+  .signup-title {
+    text-align: center; /* Memposisikan teks ke tengah */
+    color: #ffffff;
+    margin-bottom: 20px; /* Memberikan jarak antara judul dan form */ 
+    font-size: 100px; /* Ukuran font */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Font family */
+  }
 
-.form-label {
-  color: rgb(212, 156, 92); 
-}
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+  }
 
-.signup-title {
-  text-align: center; /* Memposisikan teks ke tengah */
-  color: #ffffff;
-  margin-bottom: 20px; /* Memberikan jarak antara judul dan form */ 
-  font-size: 100px; /* Ukuran font */
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Font family */
-}
+  .card {
+    justify-content: flex-start;
+    background-color: #FC6736;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
 
-
+  .form-outline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 </style>
 </head>
 <body>
-<!-- Section: Design Block -->
 <section class="background-radial-gradient overflow-hidden">
-    <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
-      <div class="signup-title">
-        <h2>Signup</h2>
+  <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+    <div class="signup-title">
+      <h2>Signup</h2>
     </div>
-      <div class="row gx-lg-5 align-items-center mb-5">
-        <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
-          <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
-          <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
-  
-          <div class="card bg-glass">
-            <div class="card-body px-4 py-5 px-md-5">
-              <form action="/auth/sign" method="post">
-                @csrf
-                <!-- Textbox for name -->
-                <div data-mdb-input-init class="form-outline mb-4">
-                  <input type="text" id="name" name="name" class="form-control textbox" /> <!-- Menambahkan kelas "textbox" -->
-                  <label class="form-label" for="name">Name</label>
-                </div>
+    <div class="card bg-glass">
+      <div class="card-body px-4 py-5 px-md-5">
+        <form action="/auth/sign" method="post">
+          @csrf
+          <!-- Textbox for name -->
+          <div data-mdb-input-init class="form-outline mb-4">
+            <input type="text" id="name" name="name" class="form-control textbox" /> <!-- Menambahkan kelas "textbox" -->
+            <label class="form-label" for="name">Name</label>
+          </div>
 
-                <!-- Email input -->
-                <div data-mdb-input-init class="form-outline mb-4">
-                  <input type="email" id="email" name="email" class="form-control textbox" /> <!-- Menambahkan kelas "textbox" -->
-                  <label class="form-label" for="email">Email</label>
-                </div>
-  
-                <!-- Password input -->
-                <div data-mdb-input-init class="form-outline mb-4">
-                  <input type="password" id="password" name="password" class="form-control textbox" /> <!-- Menambahkan kelas "textbox" -->
-                  <label class="form-label" for="password">Password</label>
-                </div>
+          <!-- Email input -->
+          <div data-mdb-input-init class="form-outline mb-4">
+            <input type="email" id="email" name="email" class="form-control textbox" /> <!-- Menambahkan kelas "textbox" -->
+            <label class="form-label" for="email">Email</label>
+          </div>
 
-                <!-- Confirm Password input -->
-                <div data-mdb-input-init class="form-outline mb-4">
-                  <input type="password" id="confirmPassword" name="confirm" class="form-control textbox" /> <!-- Menambahkan kelas "textbox" -->
-                  <label class="form-label" for="confirmPassword">Confirm Password</label>
-                </div>
-  
-                <!-- Submit button -->
-                <button type="submit" class="btn btn-primary" style="width: 55rem; border-radius: 50px;">
-                  Sign up
-              </button>
-  
-</body>
-</html>
+          <!-- Password input -->
+          <div data-mdb-input-init class="form-outline mb-4">
+            <input type="password" id="password" name="password" class="form-control textbox" /> <!-- Menambahkan kelas "textbox" -->
+            <label class="form-label" for="password">Password</label>
+          </div>
+
+          <!-- Confirm Password input -->
+          <div data-mdb-input-init class="form-outline mb-4">
+            <input type="password" id="confirmPassword" name="confirm" class="form-control textbox" /> <!-- Menambahkan kelas "textbox" -->
+            <label class="form-label" for="confirmPassword">Confirm Password</label>
+          </div>
+
+          <!-- Submit button -->
+          <button type="submit" class="btn btn-primary btn-block">
+            Sign up
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
 <script>
   let message = '{{Session::get('alert')}}'
   let exist = '{{Session::has('alert')}}'
   if (exist) {
-    alert(messasge)
+    alert(message)
   }
 </script>
+</body>
+</html>

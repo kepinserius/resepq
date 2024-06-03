@@ -13,7 +13,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body style="background-color: #FC6736;"> 
+<body style="background-color: #c1c0c0;"> 
+    
     
     <div class="container">
         <div class="profile">
@@ -43,7 +44,8 @@
                     <input type="text" id="address" name="address" value="{{$data['alamat']}}" style="width: 600px;" disabled> <!-- Atur lebar input -->
                 </div>
                 <div class="buttons">
-                    <a href = "/profile/{{$data['id']}}"><button id="edit-profile-btn">Edit</button></a>
+                    <a href="/profile/{{ $data['id'] }}"><button class="bn632-hover bn20" id="edit-profile-btn">Edit</button></a>
+                    <a href="beranda"><button class="bn632-hover bn20">Simpan</button></a>
                 </div>
             </div>
         </div>
